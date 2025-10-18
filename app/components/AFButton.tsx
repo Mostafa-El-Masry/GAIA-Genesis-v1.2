@@ -1,22 +1,5 @@
-"use client";
-import React from "react";
-import "../styles/glacium.css";
-
-interface AFButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "outline";
-  children: React.ReactNode;
+'use client';
+import React from 'react';
+export default function AFButton({ children, ...rest }:{ children: React.ReactNode } & React.ButtonHTMLAttributes<HTMLButtonElement>){
+  return <button className="btn" {...rest}>{children}</button>;
 }
-
-const AFButton: React.FC<AFButtonProps> = ({
-  variant = "primary",
-  children,
-  ...rest
-}) => {
-  return (
-    <button className={`btn btn-${variant}`} {...rest}>
-      {children}
-    </button>
-  );
-};
-
-export default AFButton;
