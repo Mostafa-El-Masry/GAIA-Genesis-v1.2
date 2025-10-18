@@ -105,8 +105,8 @@ export default function HomePage() {
             color: "var(--text-secondary)",
           }}
         >
-          <p>GAIA Genesis v1.10 — Phase 2 </p>
-          <p>© 2025 Sasa</p>
+          <p>GAIA Genesis v1.2 — Phase 3 </p>
+          <p>© 2026 Sasa</p>
         </footer>
       </div>
     </div>
