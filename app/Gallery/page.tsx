@@ -3,13 +3,13 @@ import React, { useMemo, useState } from "react";
 import "../styles/gallery.css";
 import { useSearchParams, useRouter } from "next/navigation";
 import { useMediaManifest } from "../hooks/useMediaManifest";
-import ImageGallery from "../components/gallery/ImageGallery";
+import ImageGallery from '@/components/gallery/ImageGallery';
 
 import { useGalleryMeta, Category } from "../hooks/useGalleryMeta";
 import { useVideoMeta } from "../hooks/useVideoMeta";
 import TagPicker from "../components/TagPicker";
 import StarPicker from "../components/StarPicker";
-import VideoGallery from "../components/gallery/VideoGallery";
+import VideoGallery from '@/components/gallery/VideoGallery';
 
 export default function GalleryPage() {
   const params = useSearchParams();
