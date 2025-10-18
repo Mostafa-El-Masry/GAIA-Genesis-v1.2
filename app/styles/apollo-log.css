@@ -1,0 +1,65 @@
+/* Apollo Release Log (Glacium) */
+.log-wrap {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.log-hero {
+  display: grid;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(97,179,255,0.25);
+  background: linear-gradient(180deg, rgba(108,202,255,0.18), rgba(108,202,255,0.06));
+  backdrop-filter: var(--glass-depth-1);
+}
+
+.blue-badge {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .35rem .6rem; border-radius: 999px;
+  background: linear-gradient(180deg,#0b84ff,#4aa8e2);
+  color: #041019; font-weight: 700; letter-spacing: .3px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.block {
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: var(--glass-depth-1);
+  padding: var(--space-md);
+}
+
+.log-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.log-table th, .log-table td {
+  padding: .6rem .7rem;
+  border-bottom: 1px solid rgba(255,255,255,0.18);
+  vertical-align: top;
+  font-size: 0.95rem;
+}
+.log-table th {
+  text-align: left;
+  opacity: 0.85;
+}
+.section-title {
+  display: flex; align-items: center; gap: .6rem; font-weight: 700;
+}
+.section-title .dot {
+  width: .6rem; height: .6rem; border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 0 4px rgba(108,202,255,0.25);
+}
+
+.kv {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: .4rem .8rem;
+}
+.kv div:nth-child(odd) { opacity: 0.8; }
+.kv div:nth-child(even) { font-weight: 600; }
+
+.small { opacity: .85; font-size: .95rem; }
+.muted { color: var(--muted); }

@@ -1,0 +1,82 @@
+/* --- Health Tracker (Glacium) --- */
+.health-wrap {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: var(--space-lg);
+}
+@media (max-width: 1024px) {
+  .health-wrap { grid-template-columns: 1fr; }
+}
+
+.health-sidebar {
+  position: sticky;
+  top: 80px;
+  height: calc(100vh - 100px);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+@media (min-width: 960px) {
+  .summary-cards { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+.card {
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: var(--glass-depth-2);
+  padding: var(--space-md);
+}
+
+.health-charts {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.chart-box {
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: var(--glass-depth-1);
+  padding: var(--space-md);
+}
+
+.table-box {
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: var(--glass-depth-1);
+  padding: var(--space-md);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table th, .table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  font-size: 0.95rem;
+}
+.table th { text-align: left; opacity: 0.8; }
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.3);
+  font-size: var(--font-size-sm);
+  margin-right: 4px;
+}
+
+.row-high { color: #ff8a8a; }
+.row-low  { color: #8ad3ff; }
+
+.controls { display: flex; gap: var(--space-sm); flex-wrap: wrap; }
