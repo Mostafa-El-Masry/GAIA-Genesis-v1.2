@@ -16,7 +16,6 @@ export function load<T>(key: string, fallback: T, migrate?: (x: any) => T): T {
 }
 
 export function save<T>(key: string, data: T, v = 3) {
-  // If you pass an array, preserve it as a plain array (for backward-compat keys like `gallery_meta`).
   if (Array.isArray(data)) {
     localStorage.setItem(key, JSON.stringify(data));
     return;
