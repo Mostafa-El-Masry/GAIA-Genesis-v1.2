@@ -1,0 +1,9 @@
+// Copy into your next.config.mjs (keep your other settings):
+import path from 'node:path';
+const nextConfig = {
+  webpack(config) {
+    config.resolve.alias['@'] = path.resolve(__dirname); // so '@/...' maps to project root
+    return config;
+  },
+};
+export default nextConfig;
